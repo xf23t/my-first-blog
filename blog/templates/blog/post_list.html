@@ -26,14 +26,14 @@
 </head>
 
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 
 	<div class="navbar navbar-default navbar-fixed-top">
@@ -61,7 +61,22 @@
 		</div>
 
 		<br>
+
+		{% for post in posts %}
+		<div>	
+			<p>published : {{post.published_date}} </p>
+			<h1><a href="">{{post.title}}</a></h1>
+			<p>{{post.text|linebreaksbr}}</p>
+			
+			
+
+
+		</div>
+		{% endfor %}
+
+
 	</div>
+
 </body>
 </html>
 
